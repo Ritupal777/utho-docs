@@ -1,3 +1,8 @@
+---
+title: "How to Deploy Kubernetes Dashboard Quickly and Easily"
+date: "2025-04-03"
+---
+
 # How to Deploy Kubernetes Dashboard Quickly and Easily
 ![alt text](images/k8-1.jpg)
 
@@ -5,8 +10,7 @@ Kubernetes provides an easy-to-use Web dashboard that allows users to create, mo
 
 ## To deploy the latest Kubernetes dashboard, follow these steps:
 
-### Step 1
-Run the following command to deploy the latest dashboard version:
+### Step 1 : Run the following command to deploy the latest dashboard version:
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.aml
 ```
@@ -20,7 +24,7 @@ kubectl get pods -A
 ![alt text](images/k83.jpg)
 
 
-### Step 2: Creating Admin User
+### Step 2 : Creating Admin User
 Start by making a new directory for the dashboard configuration files.
 ```bash
 mkdir ~/dashboard && cd ~/dashboard
@@ -66,7 +70,7 @@ You'll then see an output of a long string of seemingly random characters.
 ![alt text](images/k84.jpg)
 
 
-### Step 3: Creating Read-Only User
+### Step 3 : Creating Read-Only User
 ```bash
 nano dashboard-read-only.yaml
 ```
@@ -133,7 +137,7 @@ To allow users to log in via the read-only account, you'll need to provide a tok
 kubectl get secret -n kubernetes-dashboard $(kubectl get serviceaccount read-only-user -n kubernetes-dashboard -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
 ```
 
-### Step 4: Accessing the Dashboard
+### Step 4 : Accessing the Dashboard
 We've deployed the dashboard and created user accounts for it. Next, we can start managing the Kubernetes cluster itself.
 ```bash
 kubectl proxy

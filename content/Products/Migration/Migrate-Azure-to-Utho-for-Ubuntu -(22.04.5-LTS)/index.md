@@ -1,4 +1,7 @@
-
+---
+title: "Migrate Azure to Utho for Ubuntu (22.04.5 LTS)"
+date: "2025-04-02"
+---
 # Migrate Azure to Utho for Ubuntu (22.04.5 LTS)
 
 ## Step 1: Initiate the Migration on the Utho Platform
@@ -81,7 +84,7 @@ Satyajit@Azure-vm:~$
 
 3. **Now, execute the migration command obtained from the Utho console:**
    ```bash
-   root@Azure-vm:/home/Satyajit# curl https://api.utho.com/migration.sh | bash -s inZJGOHDbQzukImeaqCsKUywvxgLTNrPFpMBftcRAholXYdWjVES 1637626
+   root@Azure-vm:/home/Satyajit# curl https://api.utho.com/migration.sh | bash -s "$UTHO_API_KEY" CloudID 
    ```
 ```
  % Total	% Received % Xferd  Average Speed   Time	Time 	Time  Current

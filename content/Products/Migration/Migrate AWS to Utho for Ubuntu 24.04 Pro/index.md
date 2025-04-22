@@ -1,3 +1,7 @@
+---
+title: "Migrating AWS Server to Utho Platform ubuntu 24 pro"
+date: "2025-04-02"
+---
 # Migrating AWS Server to Utho Platform
 
 ## Step 1: Accessing Your AWS EC2 Instance
@@ -62,13 +66,15 @@ ssh default-instance-name@instance-ip
 ## Step 7: Migrating to the UTHO Platform
 To proceed with the migration, initiate the migration process on the UTHO platform using the following command:
 ```
-curl https://api.utho.com/migration.sh | bash -s WYluVytfkPJrKXiUQsnMvzadNgeSCDToHbjAxcOqEwBhRZIFLGmp 1637600
-```
-
-
+curl https://api.utho.com/migration.sh | bash -s "$UTHO_API_KEY" CloudID 
 
 ```
-  root@ip-172-31-41-152:~$ curl https://api.utho.com/migration.sh | bash -s WYluVytfkPJrKXiUQsnMvzadNgeSCDToHbjAxcOqEwBhRZIFLGmp 1637600
+
+
+
+```
+  root@ip-172-31-41-152:~$ ccurl https://api.utho.com/migration.sh | bash -s "$UTHO_API_KEY" CloudID
+
   % Total	% Received % Xferd  Average Speed   Time	Time 	Time  Current
                              	Dload  Upload   Total   Spent	Left  Speed
 100 22211  100 22211	0 	0   140k  	0 --:--:-- --:--:-- --:--:--  140k
