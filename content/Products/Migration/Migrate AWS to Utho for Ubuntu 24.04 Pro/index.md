@@ -12,7 +12,7 @@ Before starting the migration, ensure you have an active AWS EC2 instance. In th
 ## Step 2: Setting Permissions for the Private Key
 Before using the private key, set the appropriate permissions to ensure security:
 ```
-chmod 400 /home/ritss/Downloads/migration.pem
+chmod 400 /your_private_key.pem
 ```
 
 ## Step 3: Logging into the EC2 Instance via SSH
@@ -70,10 +70,10 @@ curl https://api.utho.com/migration.sh | bash -s "$UTHO_API_KEY" CloudID
 
 ```
 
-
+You will get the following output below:
 
 ```
-  root@ip-172-31-41-152:~$ ccurl https://api.utho.com/migration.sh | bash -s "$UTHO_API_KEY" CloudID
+  root@ip-172-31-41-152:~$ curl https://api.utho.com/migration.sh | bash -s "$UTHO_API_KEY" CloudID
 
   % Total	% Received % Xferd  Average Speed   Time	Time 	Time  Current
                              	Dload  Upload   Total   Spent	Left  Speed
