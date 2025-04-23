@@ -79,13 +79,15 @@ Satyajit@Azure-vm:~$
 ```
 2. Enter the password when prompted. After logging in, switch to the root user:
    ```bash
-   Satyajit@Azure-vm:~$ sudo su
+   azure-user@Azure-vm:~$ sudo su
    ```
 
 3. **Now, execute the migration command obtained from the Utho console:**
    ```bash
    root@Azure-vm:/home/Satyajit# curl https://api.utho.com/migration.sh | bash -s "$UTHO_API_KEY" CloudID 
    ```
+
+   ### OUTPUT
 ```
  % Total	% Received % Xferd  Average Speed   Time	Time 	Time  Current
                              	Dload  Upload   Total   Spent	Left  Speed
